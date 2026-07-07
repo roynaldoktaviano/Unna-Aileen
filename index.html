@@ -180,7 +180,6 @@
 </head>
 <body>
 
-    <div class="placeholder-note">PREVIEW — emoji = placeholder asset</div>
 
     <div id="loader"><div class="spinner"></div></div>
 
@@ -323,66 +322,6 @@
                             <div class="carousel-item"><img src="4.jpeg" alt="Unna & Aileen 4" onerror="this.style.display='none'"></div>
                         </div>
                     </div>
-
-                    <div class="glass-card stagger">
-                        <h2 class="section-title">Send Gift</h2>
-                        <div style="margin-top: 30px; margin-bottom: 10px; display: flex; flex-direction: column; align-items: center;">
-
-                            <div style="position: relative; width: 100%; max-width: 320px;">
-
-                                <div style="
-                                    background: linear-gradient(160deg, #1e0c33, #150a24);
-                                    border: 1px solid rgba(255,45,149,0.35);
-                                    border-radius: 20px;
-                                    padding: 25px;
-                                    position: relative;
-                                    overflow: hidden;
-                                    box-shadow: 0 0 25px rgba(45,212,208,0.2);
-                                    text-align: left;
-                                    z-index: 2;
-                                ">
-                                    <div style="position: relative; z-index: 1;">
-
-                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 25px;">
-                                             <span style="font-size: 1rem; color: var(--gold); font-weight: 900; letter-spacing: 3px; font-family: var(--font-heading); display: block;">BCA</span>
-                                        </div>
-
-                                        <div style="margin-bottom: 25px;">
-                                            <span id="rek1" style="font-size: 2.2rem; color: var(--primary); font-weight: 900; letter-spacing: 3px; text-shadow: 0 0 15px rgba(255,45,149,0.4); font-family: var(--font-heading); display: block;">2200778050</span>
-                                        </div>
-
-                                        <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-                                            <div>
-                                                <span style="font-size: 0.65rem; color: var(--text-muted); font-weight: 800; display: block; letter-spacing: 1.5px; margin-bottom: 3px;">ACCOUNT HOLDER</span>
-                                                <span style="font-size: 0.9rem; color: var(--text-primary); font-weight: 900; letter-spacing: 1px;">TIARA SANI</span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div style="position: relative; margin-top: 15px;">
-                                    <button onclick="copyRek('rek1', this)" style="
-                                        width: 100%;
-                                        padding: 16px;
-                                        border-radius: 25px;
-                                        background: transparent;
-                                        border: 2px solid var(--primary);
-                                        color: var(--primary);
-                                        font-family: var(--font-heading);
-                                        font-weight: 900;
-                                        font-size: 1.05rem;
-                                        cursor: pointer;
-                                        box-shadow: 0 0 15px rgba(255,45,149,0.2);
-                                        position: relative;
-                                        z-index: 1;
-                                        transition: all 0.2s;
-                                    ">SALIN NOMOR REKENING</button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div id="view-rsvp" class="view-section">
@@ -505,14 +444,6 @@
                 isPlaying = !isPlaying;
             };
         });
-
-        function copyRek(id, btn) {
-            navigator.clipboard.writeText(document.getElementById(id).innerText).then(() => {
-                const orig = btn.innerText;
-                btn.innerText = "Tersalin ✓"; btn.style.background = "var(--primary)"; btn.style.color = "#ffffff";
-                setTimeout(() => { btn.innerText = orig; btn.style.background = "transparent"; btn.style.color = "var(--primary)"; }, 2000);
-            });
-        }
 
         const attendanceSelect = document.getElementById('attendance');
         const jumlahTamuGroup = document.getElementById('jumlah-tamu-group');
